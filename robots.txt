@@ -1,0 +1,11 @@
+# Search engines / 検索エンジン
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: DuckDuckBot
+User-agent: Applebot
+User-agent: YandexBot
+Disallow:
+
+# Everyone else (AI crawlers, scrapers, etc.) / その他すべて
+User-agent: *
+Disallow: /
