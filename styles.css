@@ -1,0 +1,29 @@
+:root {
+  --waseda-color: #9b2121;
+}
+
+@font-face {
+  /* Note: Japanese font / これは日本語のフォント */
+  font-family: "Kosugi Maru";
+  src: url("assets/Kosugi_Maru-1.001/woff2/Kosugi_Maru-Regular.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font: 1em Kosugi Maru, sans-serif;
+  scroll-behavior: smooth;
+}
+
+img,
+svg {
+  vertical-align: middle;
+}
+
+* {
+  box-sizing: border-box;
+}
