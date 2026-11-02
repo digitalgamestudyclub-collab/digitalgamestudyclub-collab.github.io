@@ -1,11 +1,14 @@
 :root {
   --waseda-color: #9b2121;
+  --text-color: #000000;
+  --background-color: #f2f0f0;
+  color-scheme: light dark;
 }
 
 @font-face {
   /* Note: Japanese font / これは日本語のフォント */
   font-family: "Kosugi Maru";
-  src: url("assets/Kosugi_Maru-1.001/woff2/Kosugi_Maru-Regular.woff2") format("woff2");
+  src: url("assets/fonts/Kosugi_Maru/KosugiMaru-Regular.ttf") format("truetype");
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
@@ -26,4 +29,78 @@ svg {
 
 * {
   box-sizing: border-box;
+}
+
+::selection {
+  background: #9b212191;
+  text-shadow: none;
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding-inline: 1em;
+}
+
+.header-hero {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 60vh;
+  background:
+    linear-gradient(to top, rgb(0 0 0 / 0.7), rgb(0 0 0 / 0.15)),
+    url('assets/images/早稲田大学_西早稲田キャンパス_(Nishi-Waseda_Campus)_-_panoramio.jpg') center 40% / cover no-repeat;
+  color: var(--background-color);
+}
+
+.header-hero-content {
+  width: 100%;
+  padding-block: 3em;
+}
+
+.header-hero-title {
+  margin: 0 0 0.25em;
+  font-size: clamp(1.75em, 5vw, 3em);
+}
+
+.header-hero-text {
+  margin: 0;
+  font-size: 1.125em;
+}
+
+/* Photo credit (CC BY 3.0 requires it) / 写真のクレジット表記 */
+.header-hero-credit {
+  position: absolute;
+  right: 1em;
+  bottom: 0.75em;
+  margin: 0;
+  font-size: 0.75em;
+  opacity: 0.8;
+}
+
+.header-hero-credit a {
+  color: inherit;
+}
+
+.header-hero-button-container {
+  margin-top: 1.5em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.sms-button {
+  display: inline-block;
+  padding: 0.5em 1em;
+  border-radius: 0.25em;
+  background-color: var(--waseda-color);
+  color: white;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.3s ease;
+}
+
+.sms-button:hover {
+  background-color: #7a1a1a;
+  color: white;
 }
